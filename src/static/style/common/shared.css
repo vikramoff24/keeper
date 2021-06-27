@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.header-background {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgb(77, 77, 77, 0.8)),
+    url(../../img/hero.jpeg);
+  min-height: 90vh;
+
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  /* clip-path: polygon(0 0, 95% 0, 100% 100%, 0 95%); */
+}
+
+.header-title {
+  color: #000;
+  position: absolute;
+  font-size: 50px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  display: inline-block;
+  left: 50%;
+  top: 0.3%;
+  transform: translate(-50%, 0);
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  padding: 0 20px;
+  font-weight: 300;
+  animation: 0.5s topToBottom ease-in;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.568);
+  width: 300px;
+  height: 400px;
+  display: inline-block;
+  margin: 20px;
+  border-radius: 6px;
+  text-align: center;
+  position: relative;
+}
+
+.card-container {
+  position: absolute;
+  width: 80%;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.card img {
+  width: 80%;
+  margin-top: 8%;
+  transition: padding 0.2s;
+}
+.card img:hover {
+  padding: 5px;
+}
+.card a {
+  background: none;
+  border: 1px solid #000;
+  height: 40px;
+  width: 180px;
+  border-radius: 6px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, 0);
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  text-decoration: none;
+}
+.card a:hover {
+  background-color: rgb(75, 75, 75);
+  color: rgb(214, 214, 214);
+
+  transition: 0.5s;
+}
+
+.card-contacts {
+  animation: 0.5s leftToRight ease-in;
+}
+
+.card-notes {
+  animation: 0.5s rightToLeft ease-in;
+}
+
+a p {
+  margin-top: 3.5%;
+}
+
+a:visited,
+a:active {
+  color: #000;
+}
+@keyframes leftToRight {
+  0% {
+    opacity: 0;
+    transform: translatex(-50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translatex(0);
+  }
+}
+
+@keyframes rightToLeft {
+  0% {
+    opacity: 0;
+    transform: translatex(50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translatex(0);
+  }
+}
+
+@keyframes topToBottom {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 947px) {
+  .card-container {
+    /* top: 80%; */
+  }
+  .card {
+    width: 40%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 848px) {
+  .card-container {
+    width: 100%;
+  }
+  .card {
+    width: 40%;
+    height: 45vw;
+  }
+  .card a {
+    top: 34vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .card a {
+    width: 80%;
+    font-size: 16px;
+    padding-top: 3px;
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 495px) {
+  .card {
+    width: 60%;
+    height: 60vw;
+  }
+  .header-background {
+    height: 94vh;
+    min-height: 649.5px;
+  }
+  .card a {
+    margin-top: 12vw;
+  }
+}

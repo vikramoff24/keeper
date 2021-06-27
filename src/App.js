@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from "react";
+import Contact from "./static/img/contacts.png";
+import Notes from "./static/img/notes.png";
+import "./static/style/common/shared.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <div className="header-background">
+        <p className="header-title">KEEPER</p>
+        <div className="card-container">
+          <div className="card card-contacts">
+            <img src={Contact} alt="contact-img"></img>
+            <a href="https://keepcontacts-v1.herokuapp.com/">
+              <p>Keep Contacts</p>
+            </a>
+          </div>
+          <div className="card card-notes">
+            <img src={Notes} alt="contact-img"></img>
+            <a href="https://keepnotes-v1.herokuapp.com/">
+              <p>Keep Notes</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </Fragment>
   );
 }
-
 export default App;
