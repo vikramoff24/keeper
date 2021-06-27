@@ -99,7 +99,11 @@ a p {
 }
 
 a:visited,
-a:active {
+a:link {
+  color: #000;
+}
+a:visited,
+a:hover {
   color: #000;
 }
 @keyframes leftToRight {
